@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Basic Website</title>
+  <style>
+    :root{--brand:#0066cc;--bg:#f7fbff;--muted:#6b7280;--card:#fff}
+    *{box-sizing:border-box}
+    body{font-family:Arial,Helvetica,sans-serif;line-height:1.6;color:#1f2937;margin:0;background:var(--bg)}
+    header{background:linear-gradient(90deg,var(--brand),#0052a3);color:#fff;padding:20px 16px}
+    .container{max-width:900px;margin:0 auto;padding:0 16px}
+    header .top{display:flex;align-items:center;justify-content:space-between}
+    nav a{color:rgba(255,255,255,0.95);margin-right:14px;text-decoration:none;padding:6px;border-radius:4px;transition:background .18s,transform .18s}
+    nav a:hover{background:rgba(255,255,255,0.08);transform:translateY(-1px)}
+    .hero{background:linear-gradient(180deg,#fff,#f4f7fb);padding:28px;border-radius:8px;margin-top:16px;box-shadow:0 2px 6px rgba(16,24,40,0.04)}
+    .grid{display:flex;gap:16px;margin-top:16px}
+    .card{flex:1;padding:16px;border-radius:8px;background:var(--card);border:1px solid rgba(15,23,42,0.05);box-shadow:0 4px 14px rgba(2,6,23,0.04);transition:transform .18s}
+    .card:hover{transform:translateY(-4px)}
+    footer{text-align:center;padding:20px;color:var(--muted);margin-top:28px}
+    @media(max-width:600px){.grid{flex-direction:column}.hero{padding:18px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 style="margin:0;font-size:1.25rem">My Basic Website</h1>
+      <nav style="margin-top:8px">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="home" class="hero">
+      <h2>Welcome</h2>
+      <p>This is a minimal, single-file HTML website. Use it as a starting point.</p>
+    </section>
+
+    <section id="about" style="margin-top:18px">
+      <h3>About</h3>
+      <div class="grid">
+        <div class="card">
+          <h4>Feature One</h4>
+          <p>Simple, readable structure with semantic tags.</p>
+        </div>
+        <div class="card">
+          <h4>Feature Two</h4>
+          <p>Responsive layout using a small media query.</p>
+        </div>
+        <div class="card">
+          <h4>Feature Three</h4>
+          <p>Easy to customize — edit or extend as needed.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:18px">
+      <h3>Contact</h3>
+      <p>If you want to expand this, I can add forms, pages, or separate CSS/JS files.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>© 2026 My Basic Website</small>
+    </div>
+  </footer>
+</body>
+</html>
