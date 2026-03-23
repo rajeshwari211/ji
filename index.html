@@ -1,74 +1,137 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Basic Website</title>
-  <style>
-    :root{--brand:#0066cc;--bg:#f7fbff;--muted:#6b7280;--card:#fff}
-    *{box-sizing:border-box}
-    body{font-family:Arial,Helvetica,sans-serif;line-height:1.6;color:#1f2937;margin:0;background:var(--bg)}
-    header{background:linear-gradient(90deg,var(--brand),#0052a3);color:#fff;padding:20px 16px}
-    .container{max-width:900px;margin:0 auto;padding:0 16px}
-    header .top{display:flex;align-items:center;justify-content:space-between}
-    nav a{color:rgba(255,255,255,0.95);margin-right:14px;text-decoration:none;padding:6px;border-radius:4px;transition:background .18s,transform .18s}
-    nav a:hover{background:rgba(255,255,255,0.08);transform:translateY(-1px)}
-    .hero{background:linear-gradient(180deg,#fff,#f4f7fb);padding:28px;border-radius:8px;margin-top:16px;box-shadow:0 2px 6px rgba(16,24,40,0.04)}
-    .grid{display:flex;gap:16px;margin-top:16px}
-    .card{flex:1;padding:16px;border-radius:8px;background:var(--card);border:1px solid rgba(15,23,42,0.05);box-shadow:0 4px 14px rgba(2,6,23,0.04);transition:transform .18s}
-    .card:hover{transform:translateY(-4px)}
-    footer{text-align:center;padding:20px;color:var(--muted);margin-top:28px}
-    @media(max-width:600px){.grid{flex-direction:column}.hero{padding:18px}}
-  </style>
-</head>
-<body>
-  <header>
-    <div class="container">
-      <h1 style="margin:0;font-size:1.25rem">My Basic Website</h1>
-      <nav style="margin-top:8px">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Website</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-row">
+        <a class="brand" href="#top" aria-label="Home">
+          <span class="brand-badge" aria-hidden="true"></span>
+          <span class="brand-text">
+            <strong>Website</strong>
+            <span>Welcome</span>
+          </span>
+        </a>
 
-  <main class="container">
-    <section id="home" class="hero">
-      <h2>Welcome</h2>
-      <h2>Rajeshwari . Kannal</h2>
-      <p>This is a minimal, single-file HTML website. Use it as a starting point.</p>
-    </section>
+        <nav class="nav" aria-label="Primary">
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#contact">Contact</a>
+        </nav>
 
-    <section id="about" style="margin-top:18px">
-      <h3>About</h3>
-      <div class="grid">
-        <div class="card">
-          <h4>Feature One</h4>
-          <p>Simple, readable structure with semantic tags.</p>
-        </div>
-        <div class="card">
-          <h4>Feature Two</h4>
-          <p>Responsive layout using a small media query.</p>
-        </div>
-        <div class="card">
-          <h4>Feature Three</h4>
-          <p>Easy to customize — edit or extend as needed.</p>
+        <div class="actions">
+          <a class="btn" href="#contact">Sign in</a>
+          <a class="btn primary" href="#contact">Get started</a>
         </div>
       </div>
-    </section>
+    </header>
 
-    <section id="contact" style="margin-top:18px">
-      <h3>Contact</h3>
+    <main id="top">
+      <div class="container">
+        <h1>Home</h1>
+        <section id="profile" class="profile" aria-labelledby="profile-title">
+          <div class="profile-card">
+            <div class="profile-avatar" aria-hidden="true">U</div>
+            <div class="profile-body">
+              <div class="profile-head">
+                <h2 id="profile-title">Rajeshwari.Kannal</h2>
+                <p class="profile-role">Full Stack Developer</p>
+              </div>
+              <p class="profile-bio">
+                Short bio goes here. Add a few lines about what you do, what you're building, and how people can reach
+                you.
+              </p>
+              <div class="profile-actions">
+                <a class="btn primary" href="#contact">Contact</a>
+                <a class="btn" href="#features">View work</a>
+              </div>
+              <dl class="profile-stats" aria-label="Profile stats">
+                <div>
+                  <dt>Projects</dt>
+                  <dd>12</dd>
+                </div>
+                <div>
+                  <dt>Experience</dt>
+                  <dd>3+ yrs</dd>
+                </div>
+                <div>
+                  <dt>Location</dt>
+                  <dd>India</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </section>
 
-      <p>If you want to expand this, I can add forms, pages, or separate CSS/JS files.</p>
-    </section>
-  </main>
+        <section id="education" class="education" aria-labelledby="education-title">
+          <div class="section-head">
+            <h2 id="education-title">College & School</h2>
+            <p class="section-subtitle">Education details tailored for a developer profile.</p>
+          </div>
 
-  <footer>
-    <div class="container">
-      <small>© 2026 My Basic Website</small>
-    </div>
-  </footer>
-</body>
+          <div class="edu-grid" role="list">
+            <article class="edu-card" role="listitem">
+              <div class="edu-top">
+                <h3>Bachelor of Technology (CSE)</h3>
+                <p class="edu-meta">ABC Engineering College • 2021–2025</p>
+              </div>
+              <p class="edu-desc">
+                Focus: Data Structures, Web Development, DBMS, Operating Systems. Built projects with HTML/CSS/JS and
+                React.
+              </p>
+              <div class="edu-tags" aria-label="Skills">
+                <span class="tag">DSA</span>
+                <span class="tag">Web</span>
+                <span class="tag">DBMS</span>
+              </div>
+            </article>
+
+            <article class="edu-card" role="listitem">
+              <div class="edu-top">
+                <h3>Senior Secondary (Class 12)</h3>
+                <p class="edu-meta">XYZ Senior Secondary School • 2019–2021</p>
+              </div>
+              <p class="edu-desc">Stream: Science (PCM/CS). Activities: coding club, hackathons, and mini projects.</p>
+              <div class="edu-tags" aria-label="Highlights">
+                <span class="tag">Computer Science</span>
+                <span class="tag">Math</span>
+                <span class="tag">Projects</span>
+              </div>
+            </article>
+
+            <article class="edu-card" role="listitem">
+              <div class="edu-top">
+                <h3>Secondary (Class 10)</h3>
+                <p class="edu-meta">XYZ High School • 2018–2019</p>
+              </div>
+              <p class="edu-desc">Strong foundation in math and problem solving. Started learning programming basics.</p>
+              <div class="edu-tags" aria-label="Highlights">
+                <span class="tag">Problem solving</span>
+                <span class="tag">Basics</span>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer" aria-label="Footer">
+      <div class="container footer-row">
+        <p class="footer-copy">© <span id="year"></span> Srujan AB. All rights reserved.</p>
+        <nav class="footer-links" aria-label="Footer links">
+          <a href="#top">Back to top</a>
+          <a href="#features">Features</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
